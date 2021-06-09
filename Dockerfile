@@ -26,7 +26,7 @@ ADD add-files /
 # Then, save the configuration so when this container starts with a
 # blank volume, we can initialize it
 
-RUN a2enmod rewrite authz_groupfile cgi info_status; \
+RUN a2enmod rewrite authz_groupfile cgi info status; \
      perl -i -p -e "s/^127.0.0.1.*/127.0.0.1    xymon-docker # bbd apache http:\/\/localhost\//" /etc/xymon/hosts.cfg; \
      chown xymon:xymon /etc/xymon/ghostlist.cfg /var/lib/xymon/www ; \
      tar -C /etc/xymon -czf /root/xymon-config.tgz . ; \
