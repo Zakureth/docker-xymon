@@ -8,7 +8,7 @@ ADD AutomaticCleanup /etc/apt/apt.conf.d/99AutomaticCleanup
 RUN apt-get update
 
 # tcpdump is for debugging client issues, others are required
-RUN apt-get install -y curl xymon apache2 tcpdump ssmtp mailutils rrdtool ntpdate tzdata vim-tiny ntpdate rpcbind fping dumb-init
+RUN apt-get install -y curl xymon apache2 tcpdump ssmtp mailutils rrdtool ntpdate tzdata vim-tiny ntpdate rpcbind fping dumb-init traceroute
 
 #
 # No need to pull dumb-init directlt, it's part of ubuntu
