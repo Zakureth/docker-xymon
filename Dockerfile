@@ -40,5 +40,5 @@ EXPOSE 80 1984
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/etc/init.d/container-start"]
 
-HEALTHCHECK --interval=5m --timeout=3s --start-period=30s \
+HEALTHCHECK --interval=5m --timeout=3s --start-period=10s \
   CMD /usr/lib/xymon/server/bin/xymon localhost ping || exit 1
